@@ -1,0 +1,28 @@
+Calcular el promedio de los digitos pares de un numero 
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" 
+using namespace std;
+
+void main()
+{int d,i,n,s;
+   i=0;
+   s=0;
+   cout<<"Ingrese el numero a cualcular";
+   cin>>n;
+ 
+   while(n>0)
+   {
+	   d=n%10;
+	   if(d%2==0)
+	   {
+		   s=s+d;
+		   i++;
+	   }
+	   n=n/10;
+   }
+    s=s/i;
+	cout<<"El promedio de los numeros pares es: "<<s;
+	getch();
+}
