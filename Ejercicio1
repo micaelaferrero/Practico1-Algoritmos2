@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+void main()
+{ int a,b,num,den;
+    cout<<"Ingrese el  primer numerador";
+	cin>>a;
+	cout<<"Ingrese el  primer denominador";
+	cin>>b;
+	num=a;
+	den=b;
+
+	if(den==0)
+	{
+		cout<<num<<"/"<<den;
+		
+	}
+	else
+	{int x=2;
+	   while(x<=num)
+	    {
+	       if(den%x==0&&num%x==0)
+	         {
+				 den=den/x;
+				 num=num/x;
+	         }
+		   else
+		   {
+			   x++;
+		   }
+        }
+
+	}
+	cout<<"La fraccion simplificada es: "<<num<<"/"<<den;
+	getch();
+
+}
