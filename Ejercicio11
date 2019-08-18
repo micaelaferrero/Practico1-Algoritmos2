@@ -1,0 +1,38 @@
+Sumar dos vectores de la misma dimencion y colocar los resultados en un nuevo vector
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" 
+using namespace std;
+
+void main()
+{int V1[10],V2[10],n,V3[10];
+ 
+    cout<<"Ingrese la magnitut del vector";
+	cin>>n;
+
+      for(int i=0;i<n;i++)
+        {
+			cout<<"Ingrese los elementos del primer vector" ;
+			cout<<"V1["<<i<<"] =" ;
+			cin>>V1[i];
+        }
+	  for(int i=0;i<n;i++)
+        {
+			cout<<"Ingrese los elementos del segundo vector" ;
+			cout<<"V2["<<i<<"] =" ;
+			cin>>V2[i];
+	    }
+	  for(int i=0;i<n;i++)
+	  {
+		  V3[i]=V1[i]+V2[i];
+	  }
+
+	   for(int i=0;i<n;i++)
+	  {
+		  cout<<V3[i];
+	  }
+
+	   getch();
+}
