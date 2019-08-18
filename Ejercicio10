@@ -1,0 +1,29 @@
+Ordenar los elementos de un vector Usando el metodo burbuja
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" 
+using namespace std;
+
+void main()
+{int aux,i,j;
+int Vec[]={4,3,2,5,1,6};
+  for(i=0;i<5;i++)
+    {for(j=0;j<5;j++)
+       {
+		   if(Vec[j]>Vec[j+1])
+		   {
+			   aux=Vec[j];
+			   Vec[j]=Vec[j+1];
+			   Vec[j+1]=aux;
+		   }
+       }
+    }
+  for(i=0;i<5;i++)
+  {
+	  cout<<"El vector ordenado Acendentemente es : ";
+	  cout<<Vec[i];
+  }
+  getch(); 
+}
