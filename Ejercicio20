@@ -1,0 +1,30 @@
+Hacer un metodo que multiplique dos matrices y el resultado lo ponga en una tercer matriz
+
+void multiplicacion_matrices(int A[MAX][MAX], int B[MAX][MAX],int fil,int col, int fil1, int col1)
+{int C[MAX][MAX],i,j,filC,colC,k,x;
+      if(col==fil1;
+      {
+          filC=fil;
+          colC=col1;
+          x=col=fil1;
+   for(i=0;i<filC;i++)
+     {for(j=0;j<colC;j++)
+        {	C[i][j]=0;
+           for(k=0;k<x;k++)
+           {
+             C[i][j]=C[i][j]+(A[i][k]*B[k][j]);
+           }
+        }
+     }
+	else
+    {
+        cout<<"ERROR---no se puede realizar la operacion"<<endl;
+        for(i=0;i<filC;i++)
+         { for(j=0;j<colC;j++)
+            {cout<<C[i][j]<<"\t";
+            }
+               cout<<endl;
+
+		}	
+
+}
