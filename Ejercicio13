@@ -1,0 +1,54 @@
+Eliminar repetido de un vector
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void eliminarPosicion(int v[10], int &n, int pos1);
+
+void main()
+{ int v[10],n,pos1;
+   cout<<"Ingrese la magnitud del vector: ";
+   cin>>n;
+  
+   for(int i=0;i<n;i++)
+   { cout<<"Ingrese los valores  del vector: ";
+	   cin>>v[i];
+   }
+   for(int i=0;i<n;i++)
+      {for(int j=0;j<n;j++)
+        {
+			if(v[i]==v[j])
+			{ 
+				pos1=j;
+			}
+	   }
+      }
+   eliminarPosicion(v,n,pos1);
+   
+   for(int i=0;i<n;i++)
+   { cout<<v[i];
+   }
+
+   getch();
+}
+	
+void eliminarPosicion(int v[10], int &n, int pos1)
+{
+	if(pos1 < 0 || pos1 > n){
+  	cout<<"Posicion no valida...!!!";
+	}
+ else
+ {
+    int k=pos1;
+    while(k < n)
+    {
+       v[k-1]=v[k];
+	   k++;
+    }	
+    n=n-1;
+ }
+}
