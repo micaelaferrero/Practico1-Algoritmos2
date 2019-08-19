@@ -1,0 +1,32 @@
+VerificaR SI  el vector esta ordenado descendentemente
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void ordenadodes(int v[10], int n);
+
+void main()
+{ int v[10],n;
+   cout<<"Ingrese la magnitud del vector: ";
+   cin>>n;
+  
+   for(int i=0;i<n;i++)
+   { cout<<"Ingrese los valores  del vector: ";
+	   cin>>v[i];
+   }
+   ordenadodes(v,n);
+   getch();
+}
+	
+void ordenadodes(int v[10], int n)
+{ int i=0;
+	while(i < n-1)
+	{
+	   if(v[i+1] < v[i] )
+	     cout<<"El vector esta ordenado des"; 
+	   i=i+1;
+	}
+	cout<<"El vec no esta ord";
+}
