@@ -1,0 +1,44 @@
+  Verificar si los dígitos de un número están ordenados ascendentemente
+
+
+#include "stdafx.h"
+#include "iostream"
+#include "conio.h"
+
+using namespace std;
+
+
+bool digitosascendentes(int n)
+{
+	int digant=n%10,digact;
+		bool k=true;
+		n=n/10;
+		while(n>0)
+		{
+			digact=n%10;
+			if(digact>digant)
+			{
+			  k=false;
+			}
+
+			digant=digact;
+				n=n/10;
+		}
+		
+		return (k);
+		
+		}
+void main()
+{
+	int n,r;
+  cout<<"introducir el numero"<<endl;
+  cin>>n;
+  if(digitosascendentes(n)==true)
+  { 
+	  cout<<"el numero es ascedente";
+  }
+  else{
+  cout<<"el numero no es ascedente";
+  }
+  getch();
+}
