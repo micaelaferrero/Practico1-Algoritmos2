@@ -18,7 +18,7 @@ void multiplicacion_matrices(int A[MAX][MAX], int B[MAX][MAX],int fil,int col, i
      }
 	else
     {
-        cout<<"ERROR---no se puede realizar la operacion"<<endl;
+        cout<<"No se puede hacer la multiplicacion"<<endl;
         for(i=0;i<filC;i++)
          { for(j=0;j<colC;j++)
             {cout<<C[i][j]<<"\t";
