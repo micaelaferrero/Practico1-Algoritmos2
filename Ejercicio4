@@ -1,0 +1,31 @@
+Sumar dias a una fecha
+
+#include "stdafx.h"
+#include "iostream"
+#include "conio.h"
+
+using namespace std;
+
+void fecha (int a, int b, int c, int n){
+
+	int dia_mes[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+    a=n+a;
+	while (a>dia_mes[b]){
+		a=a-dia_mes[b];
+		if (b+1>12){
+			c++;
+			b=1;}
+		else b++;
+	}
+	cout<<a<<" "<<b<<" "<<c;
+
+}
+void main(){
+	int a,b,c,n;
+	cin>>a;
+	cin>>b;
+	cin>>c;
+	cin>>n;
+	fecha(a,b,c,n);
+	getch();
+}
