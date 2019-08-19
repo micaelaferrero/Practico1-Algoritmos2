@@ -1,0 +1,34 @@
+Generar n elementos fibonacci en un vector
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void fibo(int F[],int Fn[], int N);
+
+void main()
+	{
+		int fibonacci1;
+		int F[20],Fn[1],N;
+		do{
+		cout<<"Ingrese el numero de elemento"<<endl;
+		cin>>N;
+		}while(N<0);
+		fibo(F,Fn,N);
+		getch();
+	}
+
+	void fibo(int F[],int Fn[], int N)
+	{
+		for(int i=0;i<N;i++)
+		{
+			F[0]=1;
+			F[1]=1;
+			F[i+2]=F[i]+F[i+1];
+		}
+		for(int i=0;i<N;i++)
+		{		
+			cout<<"el elemento es"<<F[i]<<endl;
+		}
+	}
