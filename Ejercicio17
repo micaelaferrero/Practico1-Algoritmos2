@@ -1,0 +1,45 @@
+Suma diagonal secundaria
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void imprimir(int M[3][3], int n,int m);
+void diagonalSecundaria(int M[3][3], int n, int m);
+
+void main()
+{ int M[3][3];
+int n=3;
+int m=3;
+for(int i=0; i<n; i++)
+  { for(int j=0; j<m; j++) 
+     {
+		 cout<<"Valores";
+		 cin>>M[i][j];
+     }
+  }
+imprimir(M,n,m);
+diagonalSecundaria(M,n,m);
+getch();
+}
+
+void imprimir(int M[3][3], int n,int m)
+{ int i,j;
+  for(int i=0; i<n; i++)
+  { for(int j=0; j<m; j++)
+    { cout<<M[i][j];
+      cout<<endl;
+    }
+  }
+}
+void diagonalSecundaria(int M[3][3], int n ,int m)
+{ int suma=0;
+  for(int i=0; i<n; i++)
+   { for(int j=0; j<m; j++)
+    { if(i+j==n-1)
+	  suma=suma + M[i][j];
+    }
+  }
+  cout<<"La suma de la diagonal SEcundaria es:"<<suma<<endl;
+}
