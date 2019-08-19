@@ -1,0 +1,54 @@
+Serie 5
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+ int factorial(int n);
+ int potencia(int x, int y);
+
+ void main()
+ { int num,n,k,den,i;
+   float s=0;
+   num=1;
+   k=1;
+   den=2;
+   i=1;
+   cout<<"ingrese N: ";
+   cin>>n;
+   while(i<=n)
+   { 
+	   if(k>0)
+		   s=s+factorial(num)/potencia(den,i);
+	   else 
+	       s=s-factorial(num)/potencia(den,i);
+	    num=num+2;
+        den=den+2;
+        i=i+1;
+         k=k*(-1);
+   }
+  
+   cout<<"la suma es: "<<s;
+   getch();
+ }
+  int factorial(int n)
+ { int f=1,aux;
+   aux=n;
+   while(n>0)
+   { f=f*aux;
+     aux--;
+	 n--;
+   }
+   return (f);
+ }
+
+int potencia(int x, int y)
+ { int p, i;
+   p=1; i=1;
+   while( i<=y)
+   { p=p*x;
+     i=i+1;
+   }
+   return (p);
+ }
