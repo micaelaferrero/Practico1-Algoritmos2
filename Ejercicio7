@@ -1,0 +1,65 @@
+Llevar los numero pares al principio y los impares al final
+
+
+#include "stdafx.h"
+#include "iostream"
+#include "stdio.h"
+#include "math.h"
+#include "conio.h"
+using namespace std;
+#define M 10
+#define N 20
+void llenar (int R[],int *lim);
+void limite (int *limit);
+void solucion (int R[],int *lim);
+
+void main ()
+{		int limit;
+		int V[N];
+		limite(&limit);
+		llenar(V,&limit);
+		solucion (V,&limit);
+		getch();
+}
+
+void limite (int *limit)
+{	cout<<"ingrese cuantos valores va llenar";
+	cin>>*limit;
+}
+
+void llenar (int R[],int *lim)
+{	cout<<"ingrese lo valores de vector";
+	for (int i=0;i<*lim;i++)
+		{	cout<<"ingrese los valores de V["<<i<<"]";
+			cin>>R[i];
+		}
+}
+void solucion (int R[],int *lim)
+{	int i=0;
+    int j=0;
+	int tam;
+	tam=j+1;
+	int r[M];
+	for (i=0;i<*lim;i++)
+	{
+		if(R[i]%2==0)
+		{ 
+			for (int j=0;j<tam;j++)
+			{	
+				r[j]=R[i];
+				cout<<"r["<<j<<"]"<<r[j];
+				cout<<endl;
+			}
+		}
+	}
+	for (i=0;i<*lim;i++)
+	{
+		if(R[i]%2!=0)
+		{
+				r[j]=R[i];
+				cout<<"r["<<j<<"]"<<r[j];
+				cout<<endl;
+				j++;
+		}
+	}
+}
