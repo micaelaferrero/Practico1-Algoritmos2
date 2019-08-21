@@ -1,0 +1,58 @@
+Pregunta 16.
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void cargarA(int vecA[],int tam);
+void prom(int vecA[],int tam, int vecB[]);
+
+void main()
+{
+	int tam;
+	int vecA[MAX];
+	int vecB[MAX];
+	cout<< "Ingrese el numero de elementos del vector: ";
+	cin>> tam;
+	cargarA(vecA,tam);
+	prom(vecA,tam,vecB);
+	getch();
+}
+
+void cargarA(int vecA[],int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+		cout<< "Ingrese el valor para vecA["<< i << "]=";
+		cin>> vecA[i];
+	}
+}
+
+void prom(int vecA[],int tam, int vecB[])
+{
+	int i,j;
+	int x,y;
+	int s;
+	s=0;
+	int canti=0;
+	float prom;
+	cout<<"Inicio: ";
+	cin>>x;
+	cout<<"Final: ";
+	cin>>y;
+	for (i=x;i<y-1; i++)
+	{		
+		for (j=0;j<tam; j++)
+		{
+			vecB[j]=vecA[i]+vecA[i+1];
+		}
+	}
+	for (j=0;j<tam; j++)
+	{
+		vecB[j]=vecA[i]+vecA[i+1];
+		s=s+vecB[j];
+		canti=canti++;
+	}
+	prom= s/canti;
+	cout<<"el promedio es "<<prom;
+}
